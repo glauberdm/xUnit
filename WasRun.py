@@ -9,8 +9,3 @@ class WasRun:
 	def run(self):
 		method = getattr(self, self.name)
 		method()
-
-test = WasRun("testMethod")
-print test.wasRun
-test.run()
-print test.wasRun
