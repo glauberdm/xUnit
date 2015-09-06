@@ -11,4 +11,4 @@ class WasRun(TestCase):
 
 	def setUp(self):
 		self.wasSetUp = 1
-		self.log = "setUp"
+		self.log = "setUp "
