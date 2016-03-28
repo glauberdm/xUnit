@@ -1,3 +1,5 @@
+from TestResult import TestResult
+
 class TestCase:
 	def __init__(self, name):
 		self.name = name
@@ -10,6 +12,7 @@ class TestCase:
 		method = getattr(self, self.name)
 		method()
 		self.tearDown()
+		return TestResult()
 
 	def tearDown(self):
 		pass
