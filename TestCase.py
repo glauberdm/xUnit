@@ -7,6 +7,9 @@ class TestCase:
 
 	def run(self):
 		self.setUp()
-                method = getattr(self, self.name)
-                method()
+		method = getattr(self, self.name)
+		method()
 		self.tearDown()
+
+	def tearDown(self):
+		pass
