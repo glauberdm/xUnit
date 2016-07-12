@@ -1,11 +1,11 @@
-class TestSuite
+class TestSuite:
 
 	def __init__(self):
 		self.tests = []
 
 	def add(self, test):
-		self.test.append(test)
+		self.tests.append(test)
 
-	def run(self):
-		for test in tests:
+	def run(self, result):
+		for test in self.tests:
 			test.run(result)
