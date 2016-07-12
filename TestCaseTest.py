@@ -18,8 +18,16 @@ class TestCaseTest(TestCase):
 	def testFailedResult(self):
 		test = WasRun("testBrokenMethod")
 		result = test.run()
-		assert("1 run, 1 failed", result.summary)
+		assert("1 run, 1 failed" == result.summary())
+
+	def testFailedResultFormmatting(self):
+		result = TestResult()
+		result.testStarted()
+		result.testFailed()
+		assert("1 run, 1 failed" == result.summary())
+
 
 TestCaseTest("testTemplateMethod").run()
 TestCaseTest("testResult").run()
+TestCaseTest("testFailedResultFormmatting").run()
 TestCaseTest("testFailedResult").run()
